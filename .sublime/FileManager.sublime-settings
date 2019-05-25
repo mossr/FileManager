@@ -96,6 +96,8 @@
     "show_create_from_selection_command": true,
 
     // Set to false to disable the default alt+n key binding
-    "create_keybinding_enabled": true
+    "create_keybinding_enabled": true,
 
+    // Set to true to start new file dialog relative to currently opened file
+    "new_file_relative_to_current_dir": false
 }

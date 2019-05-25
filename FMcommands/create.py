@@ -55,6 +55,9 @@ class FmCreateCommand(AppCommand):
             # you can right-click on a file, and run `New...`
             if os.path.isfile(create_from):
                 create_from = os.path.dirname(create_from)
+        elif self.settings.get('new_file_relative_to_current_dir'):
+            create_from = os.path.dirname(self.view.file_name())
+            self.know_where_to_create_from = True
         elif self.folders:
              # it is going to be interactive, so it'll be
              # understood from the input itself
